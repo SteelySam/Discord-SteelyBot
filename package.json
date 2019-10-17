@@ -1,0 +1,16 @@
+{
+  "name": "steelybot",
+  "version": "1.0.0",
+  "description": "Steely's loyal companion bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord-economy": "^1.2.2",
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
