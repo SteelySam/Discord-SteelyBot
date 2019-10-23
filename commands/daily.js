@@ -11,7 +11,7 @@ module.exports = {
 		 
 		if (output.updated) {
 			var profile = await eco.AddToBalance(message.author.id, 1000)
-			message.reply(`You claimed your daily ${currency} successfully! You now own ${profile.newbalance} ${currency}.`);
+			message.reply(`You claimed your daily ${currency} successfully! You now own ${profile.newbalance} ${currency}.`)
 		} else {
 			message.channel.send(`Sorry, you already claimed your daily ${currency}!\nDaily resets in ${output.timetowait}`)
 		}
