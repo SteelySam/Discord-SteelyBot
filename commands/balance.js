@@ -6,6 +6,6 @@ module.exports = {
 	description: 'Check your balance',
 	async execute(message, args) {
         var output = await eco.FetchBalance(message.author.id)
-        message.channel.send(`${message.author}, you have ${output.balance} ${currency}.`);
+        message.channel.send(`${message.author}, you have ${output.balance} ${currency}.`)
 	},
 };
