@@ -12,7 +12,7 @@ module.exports = {
         if (!amount) return message.reply('Specify the amount you want to gamble!')
  
         var output = await eco.FetchBalance(message.author.id)
-        if (output.balance < amount) return message.reply('You have fewer coins than the amount you want to gamble!')
+        if (output.balance < amount) return message.reply(`You have fewer ${currency} than the amount you want to gamble!`)
  
         var gamble = await eco.Coinflip(message.author.id, flip, amount).catch(console.error)
         message.reply(`You ${gamble.output}! New balance: ${gamble.newbalance}`)
