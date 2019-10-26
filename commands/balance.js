@@ -3,6 +3,7 @@ const {prefix, token, currency} = require("../config.json");
 
 module.exports = {
 	name: 'balance',
+	aliases: ['cash'],
 	cooldown: '5',
 	description: 'Check your balance',
 	async execute(message, args) {

@@ -3,6 +3,7 @@ const {prefix, token, currency} = require("../config.json");
 
 module.exports = {
     name: 'craps',
+    aliases: ['dice'],
     cooldown: '5',
 	description: 'Gamble on a dice roll',
 	async execute(message, args) {
