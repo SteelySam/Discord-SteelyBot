@@ -1,4 +1,3 @@
-
 const eco = require("discord-economy");
 const {prefix, token, currency} = require("../config.json");
 
