@@ -1,9 +1,9 @@
-
 const eco = require("discord-economy");
 const {prefix, token, currency} = require("../config.json");
 
 module.exports = {
 	name: 'daily',
+	cooldown: '5',
 	description: 'Daily!',
 	async execute(message, args) {
 		var output = await eco.Daily(message.author.id)

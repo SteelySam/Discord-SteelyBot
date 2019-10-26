@@ -2,7 +2,8 @@ const eco = require("discord-economy");
 const {prefix, token, currency} = require("../config.json");
 
 module.exports = {
-	name: 'slots',
+    name: 'slots',
+    cooldown: '5',
 	description: 'Gamble on a slot machine',
 	async execute(message, args) {
         var amount = args[0] //Coins to gamble

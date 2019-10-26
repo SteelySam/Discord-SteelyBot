@@ -1,5 +1,6 @@
 module.exports = {
 	name: 'pat',
+	cooldown: '5',
 	description: 'pats',
 	execute(message, args) {
 		if (!message.mentions.users.size){
