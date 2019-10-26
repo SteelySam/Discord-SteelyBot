@@ -20,9 +20,10 @@ client.once('ready', () => {
 client.on('message', async message => {
     const args = message.content.slice(prefix.length).split(` `);
     const commandName = args.shift().toLowerCase();
-    const command = client.commands.get(commandName);
+    const command = client.commands.get(commandName)
+    		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    if (!message.content.startsWith(prefix) || message.author.bot || !client.commands.has(commandName)) return;
+    if (!message.content.startsWith(prefix) || message.author.bot || !command) return;
 
     if (command.args && !args.length){
         return message.channel.search(`You didn't provide any arguments`);
