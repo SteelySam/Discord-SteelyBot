@@ -1,5 +1,6 @@
 module.exports = {
 	name: 'kill',
+	cooldown: '5',
 	description: 'sometimes things gotta die',
 	execute(message, args) {
 		if (!message.mentions.users.size){

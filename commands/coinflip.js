@@ -6,6 +6,7 @@ const spin = "<a:coinflip:436677458339823636>";
 module.exports = {
         name: 'coinflip',
         aliases: [`cf`],
+        cooldown: '5',
         description: 'Gamble on a coin flip',
         async execute(message, args) {
                 var flip = args[0];     //Heads or Tails

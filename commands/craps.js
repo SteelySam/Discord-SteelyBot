@@ -2,7 +2,8 @@ const eco = require("discord-economy");
 const {prefix, token, currency} = require("../config.json");
 
 module.exports = {
-	name: 'craps',
+    name: 'craps',
+    cooldown: '5',
 	description: 'Gamble on a dice roll',
 	async execute(message, args) {
         var roll1 = Math.floor((Math.random() * 6) + 1);

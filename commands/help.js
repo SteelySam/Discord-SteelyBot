@@ -3,6 +3,7 @@ const {prefix, token, currency} = require("../config.json");
 module.exports = {
     name: 'help',
     aliases: 'commands',
+    cooldown: '5',
     description: 'provides a list of commands',
     execute(message, args){
         const data = [];
