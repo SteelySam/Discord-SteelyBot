@@ -65,10 +65,15 @@ module.exports = {
                 var text = `${message.author} spent ${bet} on ${choice}`
 		var text2 = text;
 		text2 += "\nThe coin spins... and you ";
-		if(win)
-		        text2 += `won **${currency}**!!`;
-		else
-		        text2 += `lost it all... :c`;
+                if(win){
+                        text2 += `won **${currency}**!!`;
+                        eco.AddToBalance(message.author.id, bet)
+                }
+		else{
+                        text2 += `lost it all... :c`;
+                        eco.SubtractFromBalance(message.author.id, bet)
+                }
+		        
 		text += `\nThe coin spins... :white_circle:`;
 
 				
